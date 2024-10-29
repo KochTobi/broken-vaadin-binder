@@ -32,7 +32,7 @@ public class HomeView extends VerticalLayout {
         add(new Paragraph("This is the home view"));
 
         contactInfoGrid = new Grid<>();
-        Binder<ContactInfo> binder = new Binder<>();
+        Binder<ContactInfo> binder = new Binder<>(ContactInfo.class);
         contactInfoGrid.getEditor().setBinder(binder);
         contactInfoGrid.addColumn(ContactInfo::name)
             .setHeader("Name");
